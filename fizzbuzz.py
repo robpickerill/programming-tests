@@ -11,27 +11,35 @@ import sys
 
 import argparse
 
+def fizzbuzz(number, fizz, buzz):
+
+    try:
+        if (number % fizz == 0 and number % buzz == 0):
+            return "FIZZBUZZ"
+        elif (number % fizz == 0):
+            return "BUZZ"
+        elif (number % buzz == 0):
+            return "FIZZ"
+    except TypeError:
+        return None
+        
 
 def main(args):
+
     parser = argparse.ArgumentParser()
-    parser.add_argument('-b', '--buzz', default=5, type=int)
     parser.add_argument('-f', '--fizz', default=3, type=int)
+    parser.add_argument('-b', '--buzz', default=5, type=int)
     parser.add_argument('-t', '--total', default=100, type=int)
     args = parser.parse_args()
 
     for i in range(1, args.total):
-        if (i % args.buzz == 0 and i % args.fizz == 0):
-            print "FIZZBUZZ: {}".format(i)
-            pass
-        elif (i % args.buzz == 0):
-            print "BUZZ: {}".format(i)
-            pass
-        elif (i % args.fizz == 0):
-            print "FIZZ: {}".format(i)
-            pass
-    else:
-        print "PASS: {}".format(i)
+        result = fizzbuzz(i, args.fizz, args.buzz)
+        if result:
+            print "{} - {}".format(i, result)
 
+def test_function():
+    assert fizzbuzz(15, 3, 5) == "FIZZBUZZ"
+    assert fizzbuzz(4, 2, 5) == "BUZZ"
 
 if __name__ == "__main__":
     main(sys.argv[1:])
