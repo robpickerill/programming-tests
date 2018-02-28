@@ -4,7 +4,7 @@
 # Write a program that prints the numbers from 1 to 100.
 # But for multiples of three print "Fizz" instead of the
 # number and for the multiples of five print "Buzz".
-# For numb`ers which are multiples of both three and
+# For numbers which are multiples of both three and
 # five print "FizzBuzz"
 
 # This is overkill, but the aim here is to include
