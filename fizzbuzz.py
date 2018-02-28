@@ -7,6 +7,10 @@
 # For numb`ers which are multiples of both three and
 # five print "FizzBuzz"
 
+# This is overkill, but the aim here is to include
+# unit tests automated by Travis-CI.
+
+
 import sys
 
 import argparse
