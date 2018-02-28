@@ -11,6 +11,7 @@ import sys
 
 import argparse
 
+
 def fizzbuzz(number, fizz, buzz):
 
     try:
@@ -20,9 +21,11 @@ def fizzbuzz(number, fizz, buzz):
             return "BUZZ"
         elif (number % buzz == 0):
             return "FIZZ"
+        else:
+            return
     except TypeError:
         return None
-        
+
 
 def main(args):
 
@@ -37,9 +40,14 @@ def main(args):
         if result:
             print "{} - {}".format(i, result)
 
-def test_function():
+
+def test_fizzbuzz():
+
     assert fizzbuzz(15, 3, 5) == "FIZZBUZZ"
     assert fizzbuzz(4, 2, 5) == "BUZZ"
+    assert fizzbuzz("dave", 3, 5) is None, "input was a string, should return value: None"
+
 
 if __name__ == "__main__":
+
     main(sys.argv[1:])
