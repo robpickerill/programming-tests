@@ -42,7 +42,7 @@ def main(args):
     for i in range(1, args.total):
         result = fizzbuzz(i, args.fizz, args.buzz)
         if result:
-            print "{} - {}".format(i, result)
+            print("{} - {}".format(i, result))
 
 
 def test_fizzbuzz():
