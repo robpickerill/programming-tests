@@ -11,4 +11,4 @@ install:
 
 script:
   - flake8
-  - pytest fizzbuzz/*.py countcapitalletters/*.py catdogyears/*.py
+  - pytest fizzbuzz/*.py countcapitalletters/*.py catdogyears/*.py reversestring/*.py
