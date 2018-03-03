@@ -29,7 +29,7 @@ def main(args):
 
     prime = False
 
-    while prime == False:
+    while prime is False:
         args.number += 1
         prime = isPrime(args.number)
 
@@ -37,9 +37,9 @@ def main(args):
 
 
 def test_isPrime():
-    assert isPrime(2) == True
-    assert isPrime(1) == False
-    assert isPrime(12434434249) == True
+    assert isPrime(2) is True
+    assert isPrime(1) is False
+    assert isPrime(12434434249) is True
 
 
 if __name__ == "__main__":
