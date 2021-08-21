@@ -18,6 +18,8 @@ from typing import List
 
 def lsp(pattern: str) -> List[int]:
     """
+    KMP Algorithm
+
     defines the longest suffix prefix for the pattern.
     eg "dsgwadsgz" = [0, 0, 0, 0, 0, 1, 2, 3, 0]
     """
@@ -67,4 +69,4 @@ def str_str(haystack: str, needle: str) -> int:
 
 if __name__ == "__main__":
     assert lsp("dsgwadsgz") == [0, 0, 0, 0, 0, 1, 2, 3, 0]
-    assert str_str("hello", "ll") == 2
+    assert str_str("dsgwadsgydsgwadsgydsgwadsgbdsgwadsgz", "dsgwadsgz") == 27
