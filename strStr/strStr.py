@@ -70,3 +70,7 @@ def str_str(haystack: str, needle: str) -> int:
 if __name__ == "__main__":
     assert lsp("dsgwadsgz") == [0, 0, 0, 0, 0, 1, 2, 3, 0]
     assert str_str("dsgwadsgydsgwadsgydsgwadsgbdsgwadsgz", "dsgwadsgz") == 27
+
+#       i     j
+# a a a c a a a a a c
+# 0 1 2 0 1 2 3 3 3 4
